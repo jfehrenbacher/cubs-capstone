@@ -1,0 +1,8 @@
+<h1>Choose your player</h1>
+<select ng-model="playerid">
+  <option value="{{player.id}}" ng-repeat="player in players.players">{{player.first_name}} {{player.last_name}}</option>
+</select>
+
+<button ng-click="selectPlayer(playerid)">
+  Go
+</button>
