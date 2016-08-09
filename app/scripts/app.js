@@ -31,6 +31,11 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
+      .when('/player/:playerid', {
+        templateUrl: 'views/player.html',
+        controller: 'PlayerCtrl',
+        controllerAs: 'player'
+      })
       .otherwise({
         redirectTo: '/'
       });
