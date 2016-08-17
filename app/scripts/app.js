@@ -17,7 +17,9 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ngStorage',
+    'chart.js'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -40,3 +42,5 @@ angular
         redirectTo: '/'
       });
   });
+
+

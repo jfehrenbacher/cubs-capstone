@@ -1,3 +1,6 @@
+
+
+
 <h1>{{playerinfo.player.full_name}}</h1>
 
 <div class="slashline">
@@ -21,4 +24,39 @@
 	{{playerinfo.player.seasons[0].teams[0].statistics.hitting.runs.total}}
 </p>
 
+<p>
+	{{playerinfo.player.seasons[1].teams[0].statistics.hitting.avg}}
+
+	{{playerinfo.player.seasons[1].teams[0].statistics.hitting.obp}}
+
+	{{playerinfo.player.seasons[1].teams[0].statistics.hitting.slg}}
+
+	{{playerinfo.player.seasons[1].teams[0].statistics.hitting.ops}}
+
+	{{playerinfo.player.seasons[1].teams[0].statistics.hitting.onbase.hr}}
+
+	{{playerinfo.player.seasons[1].teams[0].statistics.hitting.rbi}}
+
+	{{playerinfo.player.seasons[1].teams[0].statistics.hitting.runs.total}}
+</p>
+
 </div>
+
+
+<div id="playerchange">
+
+<select ng-model="playerid">
+  <option value="{{player.id}}" ng-repeat="player in players.players">{{player.full_name}}</option>
+</select>
+
+<button ng-click="selectPlayer(playerid)">
+  Go
+</button>
+
+</div>
+</div>
+
+
+<canvas id="doughnut" class="chart chart-doughnut"
+  chart-data="data" chart-labels="labels">
+</canvas> 

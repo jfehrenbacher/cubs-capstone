@@ -21,7 +21,7 @@ angular.module('cubsCapstoneApp')
         isArray:false
       }
     });
-  })
+  });
 
 
 
