@@ -50,7 +50,6 @@ body {
 /* Main marketing message and sign up button */
 .jumbotron {
   text-align: center;
-  border-bottom: 1px solid #e5e5e5;
 
   .btn {
     font-size: 21px;
@@ -90,5 +89,115 @@ body {
   }
 }
 
-// Player View //
+// Background//
+  html { 
+background: url(/images/background.jpg) no-repeat center center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
 
+body {
+  background-color: transparent;
+}
+
+// Main //
+.mainTitle {
+  color:white;
+  text-align:center;
+  position:relative;
+  bottom:25px;
+}
+
+.doublezero {
+  width: 200px;
+  height: 200px;
+}
+
+.center-block {
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.vertical-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position:relative;
+  top:250px;
+}
+
+.jumbotron {
+  background-color:transparent;
+
+  h1 {
+    color:white;
+    font-family: "JerseyM54";
+  }
+}
+
+@font-face {
+  font-family: "JerseyM54";
+  src: url("/fonts/Jersey M54.ttf")
+}
+@font-face {
+  font-family: "MoonBold";
+  src: url("/fonts/Moon Bold.otf")
+}
+@font-face {
+  font-family: "Moon";
+  src: url("/fonts/Moon Light.otf")
+}
+
+
+#mainKerning {
+  letter-spacing:-3px;
+}
+
+.mainSelect {
+  position:relative;
+  top:25px;
+}
+
+.dropdown {
+  background-color:white;
+  position:relative;
+  bottom:2px;
+}
+
+.mainButton {
+  background-color: rgba(176,1,1,1);
+  border: transparent;
+  width:50px;
+  height:25px;
+  margin-left:10px;
+}
+
+.mainButtonText {
+  color:white;
+  font-family: "JerseyM54";
+  font-size:16px;
+}
+
+.mainButtonArrow {
+  position:relative;
+  bottom:1px;
+  left:2px;
+}
+
+// Player View
+
+.playerName {
+  color:white;
+  font-family: "JerseyM54";
+}
+
+.slashline {
+  color:white;
+  font-family: "Moon";
+}
+th {
+  font-family: "MoonBold";
+}

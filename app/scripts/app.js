@@ -18,8 +18,7 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ngStorage',
-    'chart.js'
+    'ngStorage'
   ])
   .config(function ($routeProvider) {
     $routeProvider

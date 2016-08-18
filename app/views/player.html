@@ -1,62 +1,88 @@
 
 
 
-<h1>{{playerinfo.player.full_name}}</h1>
+<h1 class="playerName">{{playerinfo.player.full_name}}</h1>
 
 <div class="slashline">
 
-<p>
-	AVG OBP SLG OPS HR RBI R
-</p>
-<p>
-	{{playerinfo.player.seasons[0].teams[0].statistics.hitting.avg}}
-
-	{{playerinfo.player.seasons[0].teams[0].statistics.hitting.obp}}
-
-	{{playerinfo.player.seasons[0].teams[0].statistics.hitting.slg}}
-
-	{{playerinfo.player.seasons[0].teams[0].statistics.hitting.ops}}
-
-	{{playerinfo.player.seasons[0].teams[0].statistics.hitting.onbase.hr}}
-
-	{{playerinfo.player.seasons[0].teams[0].statistics.hitting.rbi}}
-
-	{{playerinfo.player.seasons[0].teams[0].statistics.hitting.runs.total}}
-</p>
-
-<p>
-	{{playerinfo.player.seasons[1].teams[0].statistics.hitting.avg}}
-
-	{{playerinfo.player.seasons[1].teams[0].statistics.hitting.obp}}
-
-	{{playerinfo.player.seasons[1].teams[0].statistics.hitting.slg}}
-
-	{{playerinfo.player.seasons[1].teams[0].statistics.hitting.ops}}
-
-	{{playerinfo.player.seasons[1].teams[0].statistics.hitting.onbase.hr}}
-
-	{{playerinfo.player.seasons[1].teams[0].statistics.hitting.rbi}}
-
-	{{playerinfo.player.seasons[1].teams[0].statistics.hitting.runs.total}}
-</p>
+<div class="table-responsive">
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Season</th>
+				<th>AVG</th>
+				<th>OBP</th>
+				<th>SLG</th>
+				<th>OPS</th>
+				<th>HR</th>
+				<th>RBI</th>
+				<th>R</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>{{playerinfo.player.seasons[0].year}}</td>
+				<td>{{playerinfo.player.seasons[0].teams[0].statistics.hitting.avg}}</td>
+				<td>{{playerinfo.player.seasons[0].teams[0].statistics.hitting.obp}}</td>
+				<td>{{playerinfo.player.seasons[0].teams[0].statistics.hitting.slg}}</td>
+				<td>{{playerinfo.player.seasons[0].teams[0].statistics.hitting.ops}}</td>
+				<td>{{playerinfo.player.seasons[0].teams[0].statistics.hitting.onbase.hr}}</td>
+				<td>{{playerinfo.player.seasons[0].teams[0].statistics.hitting.rbi}}</td>
+				<td>{{playerinfo.player.seasons[0].teams[0].statistics.hitting.runs.total}}</td>	        
+			</tr>
+			<tr>
+				<td>{{playerinfo.player.seasons[1].year}}</td>
+				<td>{{playerinfo.player.seasons[1].teams[0].statistics.hitting.avg}}</td>
+				<td>{{playerinfo.player.seasons[1].teams[0].statistics.hitting.obp}}</td>
+				<td>{{playerinfo.player.seasons[1].teams[0].statistics.hitting.slg}}</td>
+				<td>{{playerinfo.player.seasons[1].teams[0].statistics.hitting.ops}}</td>
+				<td>{{playerinfo.player.seasons[1].teams[0].statistics.hitting.onbase.hr}}</td>
+				<td>{{playerinfo.player.seasons[1].teams[0].statistics.hitting.rbi}}</td>
+				<td>{{playerinfo.player.seasons[1].teams[0].statistics.hitting.runs.total}}</td>	
+			</tr>
+			<tr>
+				<td>{{playerinfo.player.seasons[2].year}}</td>
+				<td>{{playerinfo.player.seasons[2].teams[0].statistics.hitting.avg}}</td>
+				<td>{{playerinfo.player.seasons[2].teams[0].statistics.hitting.obp}}</td>
+				<td>{{playerinfo.player.seasons[2].teams[0].statistics.hitting.slg}}</td>
+				<td>{{playerinfo.player.seasons[2].teams[0].statistics.hitting.ops}}</td>
+				<td>{{playerinfo.player.seasons[2].teams[0].statistics.hitting.onbase.hr}}</td>
+				<td>{{playerinfo.player.seasons[2].teams[0].statistics.hitting.rbi}}</td>
+				<td>{{playerinfo.player.seasons[2].teams[0].statistics.hitting.runs.total}}</td>	
+			</tr>
+			<tr>
+				<td>{{playerinfo.player.seasons[3].year}}</td>
+				<td>{{playerinfo.player.seasons[3].teams[0].statistics.hitting.avg}}</td>
+				<td>{{playerinfo.player.seasons[3].teams[0].statistics.hitting.obp}}</td>
+				<td>{{playerinfo.player.seasons[3].teams[0].statistics.hitting.slg}}</td>
+				<td>{{playerinfo.player.seasons[3].teams[0].statistics.hitting.ops}}</td>
+				<td>{{playerinfo.player.seasons[3].teams[0].statistics.hitting.onbase.hr}}</td>
+				<td>{{playerinfo.player.seasons[3].teams[0].statistics.hitting.rbi}}</td>
+				<td>{{playerinfo.player.seasons[3].teams[0].statistics.hitting.runs.total}}</td>	
+			</tr>
+		</tbody>
+	</table>
+</div>
 
 </div>
 
 
-<div id="playerchange">
 
-<select ng-model="playerid">
-  <option value="{{player.id}}" ng-repeat="player in players.players">{{player.full_name}}</option>
+
+<select class="dropdown" ng-model="playerid">
+	<option value="{{player.id}}" ng-repeat="player in players.players">{{player.full_name}}</option>
 </select>
 
-<button ng-click="selectPlayer(playerid)">
-  Go
+<button class="mainButton" ng-click="selectPlayer(playerid)">
+        <span class="mainButtonText">Go         
+          <i class="fa fa-caret-right mainButtonArrow" style="font-size:14px;"></i>
+        </span>
 </button>
 
-</div>
-</div>
 
 
-<canvas id="doughnut" class="chart chart-doughnut"
+
+
+<!-- <canvas id="doughnut" class="chart chart-doughnut"
   chart-data="data" chart-labels="labels">
-</canvas> 
+</canvas>  -->

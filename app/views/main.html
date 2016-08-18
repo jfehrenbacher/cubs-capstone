@@ -1,10 +1,33 @@
-<h1>Choose your player</h1>
-<select ng-model="playerid">
-  <option value="{{player.id}}" ng-repeat="player in players.players">{{player.full_name}}</option>
-</select>
 
-<button ng-click="selectPlayer(playerid)">
-  Go
-</button>
+
+
+<div class="jumbotron">
+<div class="container vertical-center">
+  <div class="row">
+    <div class="span4"></div>
+    <div class="span4">
+      <h1 class="mainTitle"><span id="mainKerning">Fa</span>vorite Cub</h1>
+
+      <img class="center-block doublezero img-responsive" src="/images/doublezero.png" />
+
+    <div class="mainSelect">
+      <select class="dropdown" ng-model="playerid">
+        <option value="{{player.id}}" ng-repeat="player in players.players">{{player.full_name}}</option>
+      </select>
+
+      <button class="mainButton" ng-click="selectPlayer(playerid)">
+        <span class="mainButtonText">Go         
+          <i class="fa fa-caret-right mainButtonArrow" style="font-size:14px;"></i>
+        </span>
+
+      </button>
+    </div>
+    </div>
+    <div class="span4"></div>
+  </div>
+</div>
+
+
+
 
 
