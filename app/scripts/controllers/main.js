@@ -9,6 +9,7 @@
  */
 angular.module('cubsCapstoneApp')
   .controller('MainCtrl', function ($scope, players, $location, $localStorage) {
+  	$scope.pageClass = 'page-main';
     $scope.players = players.query();
 
 

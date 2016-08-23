@@ -1,7 +1,7 @@
 
 
 <div class="container playerContainer">
-	<h1 class="playerName">{{playerinfo.player.full_name}}</h1>
+	<h1 class="playerName">{{playerinfo.player.full_name}} {{playerinfo.player.primary_position}} </h1>
 
 	<div class="slashline">
 		<h3 class="battingTitle">Batting</h3>
@@ -22,7 +22,7 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr ng-repeat="seasons in playerinfo">
+					<tr>
 						<td>{{playerinfo.player.seasons[0].year}}</td>
 						<td>{{playerinfo.player.seasons[0].teams[0].statistics.hitting.ab}}</td>
 						<td>{{playerinfo.player.seasons[0].teams[0].statistics.hitting.onbase.h}}</td>
@@ -34,7 +34,7 @@
 						<td>{{playerinfo.player.seasons[0].teams[0].statistics.hitting.rbi}}</td>
 						<td>{{playerinfo.player.seasons[0].teams[0].statistics.hitting.runs.total}}</td>	        
 					</tr>
-					<tr>
+					<tr ng-if="playerinfo.player.seasons[1]">
 						<td>{{playerinfo.player.seasons[1].year}}</td>
 						<td>{{playerinfo.player.seasons[1].teams[0].statistics.hitting.ab}}</td>
 						<td>{{playerinfo.player.seasons[1].teams[0].statistics.hitting.onbase.h}}</td>
@@ -46,7 +46,7 @@
 						<td>{{playerinfo.player.seasons[1].teams[0].statistics.hitting.rbi}}</td>
 						<td>{{playerinfo.player.seasons[1].teams[0].statistics.hitting.runs.total}}</td>	
 					</tr>
-					<tr>
+					<tr ng-if="playerinfo.player.seasons[2]">
 						<td>{{playerinfo.player.seasons[2].year}}</td>
 						<td>{{playerinfo.player.seasons[2].teams[0].statistics.hitting.ab}}</td>
 						<td>{{playerinfo.player.seasons[2].teams[0].statistics.hitting.onbase.h}}</td>
@@ -58,7 +58,7 @@
 						<td>{{playerinfo.player.seasons[2].teams[0].statistics.hitting.rbi}}</td>
 						<td>{{playerinfo.player.seasons[2].teams[0].statistics.hitting.runs.total}}</td>	
 					</tr>
-					<tr>
+					<tr ng-if="playerinfo.player.seasons[3]">
 						<td>{{playerinfo.player.seasons[3].year}}</td>
 						<td>{{playerinfo.player.seasons[3].teams[0].statistics.hitting.ab}}</td>
 						<td>{{playerinfo.player.seasons[3].teams[0].statistics.hitting.onbase.h}}</td>
@@ -99,7 +99,7 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr ng-repeat="seasons in playerinfo">
+					<tr>
 						<td>{{playerinfo.player.seasons[0].year}}</td>
 						<td>{{playerinfo.player.seasons[0].teams[0].statistics.pitching.games.win}}</td>
 						<td>{{playerinfo.player.seasons[0].teams[0].statistics.pitching.games.loss}}</td>
@@ -117,7 +117,7 @@
 						<td>{{playerinfo.player.seasons[0].teams[0].statistics.pitching.oba}}</td>
 						<td>{{playerinfo.player.seasons[0].teams[0].statistics.pitching.whip}}</td>	 	        
 					</tr>
-					<tr>
+					<tr ng-if="playerinfo.player.seasons[1].teams[0].statistics.pitching">
 						<td>{{playerinfo.player.seasons[1].year}}</td>
 						<td>{{playerinfo.player.seasons[1].teams[0].statistics.pitching.games.win}}</td>
 						<td>{{playerinfo.player.seasons[1].teams[0].statistics.pitching.games.loss}}</td>
@@ -135,7 +135,7 @@
 						<td>{{playerinfo.player.seasons[1].teams[0].statistics.pitching.oba}}</td>
 						<td>{{playerinfo.player.seasons[1].teams[0].statistics.pitching.whip}}</td>	 	
 					</tr>
-					<tr>
+					<tr ng-if="playerinfo.player.seasons[2].teams[0].statistics.pitching">
 						<td>{{playerinfo.player.seasons[2].year}}</td>
 						<td>{{playerinfo.player.seasons[2].teams[0].statistics.pitching.games.win}}</td>
 						<td>{{playerinfo.player.seasons[2].teams[0].statistics.pitching.games.loss}}</td>
@@ -153,7 +153,7 @@
 						<td>{{playerinfo.player.seasons[2].teams[0].statistics.pitching.oba}}</td>
 						<td>{{playerinfo.player.seasons[2].teams[0].statistics.pitching.whip}}</td>	 	
 					</tr>
-					<tr>
+					<tr ng-if="playerinfo.player.seasons[3].teams[0].statistics.pitching">
 						<td>{{playerinfo.player.seasons[3].year}}</td>
 						<td>{{playerinfo.player.seasons[3].teams[0].statistics.pitching.games.win}}</td>
 						<td>{{playerinfo.player.seasons[3].teams[0].statistics.pitching.games.loss}}</td>
@@ -190,17 +190,15 @@
 </div>
 
 
-<div id="homerunChart">
+<!-- <div id="homerunChart">
 	<dl>
   <dt>
     Homeruns By Season
   </dt>
   <dd class="percentage percentage-{{playerinfo.player.seasons[0].teams[0].statistics.hitting.outs.ktotal}}"><span class="text">{{playerinfo.player.seasons[0].year}} -- {{playerinfo.player.seasons[0].teams[0].statistics.hitting.onbase.hr}}</span></dd>
+    <dd class="percentage percentage-{{playerinfo.player.seasons[0].teams[0].statistics.hitting.outs.ktotal}}"><span class="text">{{playerinfo.player.seasons[0].year}} -- {{playerinfo.player.seasons[0].teams[0].statistics.hitting.onbase.hr}}</span></dd>
   <dd class="percentage percentage-49"><span class="text">Chrome: 49.77%</span></dd>
   <dd class="percentage percentage-16"><span class="text">Firefox: 16.09%</span></dd>
   <dd class="percentage percentage-5"><span class="text">Safari: 5.41%</span></dd>
 </dl>
-</div>
-<!-- <canvas id="doughnut" class="chart chart-doughnut"
-  chart-data="data" chart-labels="labels">
-</canvas>  -->
+</div> -->

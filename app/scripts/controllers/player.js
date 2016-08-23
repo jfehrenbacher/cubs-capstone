@@ -9,6 +9,7 @@
  */
 angular.module('cubsCapstoneApp')
   .controller('PlayerCtrl', function ($scope, player, players, $routeParams, $location, $localStorage) {
+    $scope.pageClass = 'page-player';
   	$scope.playerid = $routeParams.playerid;
   	$scope.bustCache = true;
   	if ($localStorage[$scope.playerid]) {
