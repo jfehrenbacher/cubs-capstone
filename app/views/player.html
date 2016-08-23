@@ -74,7 +74,7 @@
 			</table>
 		</div>
 
-		<div ng-if"playerinfo.player.seasons[0].teams[0].statistics.pitching">
+		<div ng-if="playerinfo.player.seasons[0].teams[0].statistics.pitching">
 			<h3 class="pitchingTitle">Pitching</h3>
 		<div class="table-responsive">
 			<table class="table">
@@ -187,13 +187,20 @@
 			<i class="fa fa-caret-right mainButtonArrow" style="font-size:14px;"></i>
 		</span>
 	</button>
-
-
 </div>
 
 
-
-
+<div id="homerunChart">
+	<dl>
+  <dt>
+    Homeruns By Season
+  </dt>
+  <dd class="percentage percentage-{{playerinfo.player.seasons[0].teams[0].statistics.hitting.outs.ktotal}}"><span class="text">{{playerinfo.player.seasons[0].year}} -- {{playerinfo.player.seasons[0].teams[0].statistics.hitting.onbase.hr}}</span></dd>
+  <dd class="percentage percentage-49"><span class="text">Chrome: 49.77%</span></dd>
+  <dd class="percentage percentage-16"><span class="text">Firefox: 16.09%</span></dd>
+  <dd class="percentage percentage-5"><span class="text">Safari: 5.41%</span></dd>
+</dl>
+</div>
 <!-- <canvas id="doughnut" class="chart chart-doughnut"
   chart-data="data" chart-labels="labels">
 </canvas>  -->
