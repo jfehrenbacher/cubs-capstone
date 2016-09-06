@@ -2,7 +2,7 @@
 
 <div class="container playerContainer">
 	<h1 class="playerName">{{playerinfo.player.full_name}} {{playerinfo.player.primary_position}} </h1>
-
+<div class="statistics">
 	<div class="slashline">
 		<h3 class="battingTitle">Batting</h3>
 		<div class="table-responsive">
@@ -76,108 +76,268 @@
 
 		<div ng-if="playerinfo.player.seasons[0].teams[0].statistics.pitching">
 			<h3 class="pitchingTitle">Pitching</h3>
-		<div class="table-responsive">
-			<table class="table">
-				<thead>
-					<tr>
-						<th>Season</th>
-						<th>W</th>
-						<th>L</th>
-						<th>ERA</th>
-						<th>G</th>
-						<th>GS</th>
-						<th>SV</th>
-						<th>SVO</th>
-						<th>IP</th>
-						<th>H</th>
-						<th>ER</th>
-						<th>HR</th>
-						<th>BB</th>
-						<th>SO</th>
-						<th>AVG</th>
-						<th>WHIP</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>{{playerinfo.player.seasons[0].year}}</td>
-						<td>{{playerinfo.player.seasons[0].teams[0].statistics.pitching.games.win}}</td>
-						<td>{{playerinfo.player.seasons[0].teams[0].statistics.pitching.games.loss}}</td>
-						<td>{{playerinfo.player.seasons[0].teams[0].statistics.pitching.era}}</td>
-						<td>{{playerinfo.player.seasons[0].teams[0].statistics.pitching.games.play}}</td>
-						<td>{{playerinfo.player.seasons[0].teams[0].statistics.pitching.games.start}}</td>
-						<td>{{playerinfo.player.seasons[0].teams[0].statistics.pitching.games.save}}</td>
-						<td>{{playerinfo.player.seasons[0].teams[0].statistics.pitching.games.svo}}</td>
-						<td>{{playerinfo.player.seasons[0].teams[0].statistics.pitching.ip_2}}</td>
-						<td>{{playerinfo.player.seasons[0].teams[0].statistics.pitching.onbase.h}}</td>
-						<td>{{playerinfo.player.seasons[0].teams[0].statistics.pitching.runs.earned}}</td>
-						<td>{{playerinfo.player.seasons[0].teams[0].statistics.pitching.onbase.hr}}</td>
-						<td>{{playerinfo.player.seasons[0].teams[0].statistics.pitching.onbase.bb}}</td>
-						<td>{{playerinfo.player.seasons[0].teams[0].statistics.pitching.outs.ktotal}}</td>
-						<td>{{playerinfo.player.seasons[0].teams[0].statistics.pitching.oba}}</td>
-						<td>{{playerinfo.player.seasons[0].teams[0].statistics.pitching.whip}}</td>	 	        
-					</tr>
-					<tr ng-if="playerinfo.player.seasons[1].teams[0].statistics.pitching">
-						<td>{{playerinfo.player.seasons[1].year}}</td>
-						<td>{{playerinfo.player.seasons[1].teams[0].statistics.pitching.games.win}}</td>
-						<td>{{playerinfo.player.seasons[1].teams[0].statistics.pitching.games.loss}}</td>
-						<td>{{playerinfo.player.seasons[1].teams[0].statistics.pitching.era}}</td>
-						<td>{{playerinfo.player.seasons[1].teams[0].statistics.pitching.games.play}}</td>
-						<td>{{playerinfo.player.seasons[1].teams[0].statistics.pitching.games.start}}</td>
-						<td>{{playerinfo.player.seasons[1].teams[0].statistics.pitching.games.save}}</td>
-						<td>{{playerinfo.player.seasons[1].teams[0].statistics.pitching.games.svo}}</td>
-						<td>{{playerinfo.player.seasons[1].teams[0].statistics.pitching.ip_2}}</td>
-						<td>{{playerinfo.player.seasons[1].teams[0].statistics.pitching.onbase.h}}</td>
-						<td>{{playerinfo.player.seasons[1].teams[0].statistics.pitching.runs.earned}}</td>
-						<td>{{playerinfo.player.seasons[1].teams[0].statistics.pitching.onbase.hr}}</td>
-						<td>{{playerinfo.player.seasons[1].teams[0].statistics.pitching.onbase.bb}}</td>
-						<td>{{playerinfo.player.seasons[1].teams[0].statistics.pitching.outs.ktotal}}</td>
-						<td>{{playerinfo.player.seasons[1].teams[0].statistics.pitching.oba}}</td>
-						<td>{{playerinfo.player.seasons[1].teams[0].statistics.pitching.whip}}</td>	 	
-					</tr>
-					<tr ng-if="playerinfo.player.seasons[2].teams[0].statistics.pitching">
-						<td>{{playerinfo.player.seasons[2].year}}</td>
-						<td>{{playerinfo.player.seasons[2].teams[0].statistics.pitching.games.win}}</td>
-						<td>{{playerinfo.player.seasons[2].teams[0].statistics.pitching.games.loss}}</td>
-						<td>{{playerinfo.player.seasons[2].teams[0].statistics.pitching.era}}</td>
-						<td>{{playerinfo.player.seasons[2].teams[0].statistics.pitching.games.play}}</td>
-						<td>{{playerinfo.player.seasons[2].teams[0].statistics.pitching.games.start}}</td>
-						<td>{{playerinfo.player.seasons[2].teams[0].statistics.pitching.games.save}}</td>
-						<td>{{playerinfo.player.seasons[2].teams[0].statistics.pitching.games.svo}}</td>
-						<td>{{playerinfo.player.seasons[2].teams[0].statistics.pitching.ip_2}}</td>
-						<td>{{playerinfo.player.seasons[2].teams[0].statistics.pitching.onbase.h}}</td>
-						<td>{{playerinfo.player.seasons[2].teams[0].statistics.pitching.runs.earned}}</td>
-						<td>{{playerinfo.player.seasons[2].teams[0].statistics.pitching.onbase.hr}}</td>
-						<td>{{playerinfo.player.seasons[2].teams[0].statistics.pitching.onbase.bb}}</td>
-						<td>{{playerinfo.player.seasons[2].teams[0].statistics.pitching.outs.ktotal}}</td>
-						<td>{{playerinfo.player.seasons[2].teams[0].statistics.pitching.oba}}</td>
-						<td>{{playerinfo.player.seasons[2].teams[0].statistics.pitching.whip}}</td>	 	
-					</tr>
-					<tr ng-if="playerinfo.player.seasons[3].teams[0].statistics.pitching">
-						<td>{{playerinfo.player.seasons[3].year}}</td>
-						<td>{{playerinfo.player.seasons[3].teams[0].statistics.pitching.games.win}}</td>
-						<td>{{playerinfo.player.seasons[3].teams[0].statistics.pitching.games.loss}}</td>
-						<td>{{playerinfo.player.seasons[3].teams[0].statistics.pitching.era}}</td>
-						<td>{{playerinfo.player.seasons[3].teams[0].statistics.pitching.games.play}}</td>
-						<td>{{playerinfo.player.seasons[3].teams[0].statistics.pitching.games.start}}</td>
-						<td>{{playerinfo.player.seasons[3].teams[0].statistics.pitching.games.save}}</td>
-						<td>{{playerinfo.player.seasons[3].teams[0].statistics.pitching.games.svo}}</td>
-						<td>{{playerinfo.player.seasons[3].teams[0].statistics.pitching.ip_2}}</td>
-						<td>{{playerinfo.player.seasons[3].teams[0].statistics.pitching.onbase.h}}</td>
-						<td>{{playerinfo.player.seasons[3].teams[0].statistics.pitching.runs.earned}}</td>
-						<td>{{playerinfo.player.seasons[3].teams[0].statistics.pitching.onbase.hr}}</td>
-						<td>{{playerinfo.player.seasons[3].teams[0].statistics.pitching.onbase.bb}}</td>
-						<td>{{playerinfo.player.seasons[3].teams[0].statistics.pitching.outs.ktotal}}</td>
-						<td>{{playerinfo.player.seasons[3].teams[0].statistics.pitching.oba}}</td>
-						<td>{{playerinfo.player.seasons[3].teams[0].statistics.pitching.whip}}</td>	 	
-					</tr>
-				</tbody>
-			</table>
+			<div class="table-responsive">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Season</th>
+							<th>W</th>
+							<th>L</th>
+							<th>ERA</th>
+							<th>G</th>
+							<th>GS</th>
+							<th>SV</th>
+							<th>SVO</th>
+							<th>IP</th>
+							<th>H</th>
+							<th>ER</th>
+							<th>HR</th>
+							<th>BB</th>
+							<th>SO</th>
+							<th>AVG</th>
+							<th>WHIP</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>{{playerinfo.player.seasons[0].year}}</td>
+							<td>{{playerinfo.player.seasons[0].teams[0].statistics.pitching.games.win}}</td>
+							<td>{{playerinfo.player.seasons[0].teams[0].statistics.pitching.games.loss}}</td>
+							<td>{{playerinfo.player.seasons[0].teams[0].statistics.pitching.era}}</td>
+							<td>{{playerinfo.player.seasons[0].teams[0].statistics.pitching.games.play}}</td>
+							<td>{{playerinfo.player.seasons[0].teams[0].statistics.pitching.games.start}}</td>
+							<td>{{playerinfo.player.seasons[0].teams[0].statistics.pitching.games.save}}</td>
+							<td>{{playerinfo.player.seasons[0].teams[0].statistics.pitching.games.svo}}</td>
+							<td>{{playerinfo.player.seasons[0].teams[0].statistics.pitching.ip_2}}</td>
+							<td>{{playerinfo.player.seasons[0].teams[0].statistics.pitching.onbase.h}}</td>
+							<td>{{playerinfo.player.seasons[0].teams[0].statistics.pitching.runs.earned}}</td>
+							<td>{{playerinfo.player.seasons[0].teams[0].statistics.pitching.onbase.hr}}</td>
+							<td>{{playerinfo.player.seasons[0].teams[0].statistics.pitching.onbase.bb}}</td>
+							<td>{{playerinfo.player.seasons[0].teams[0].statistics.pitching.outs.ktotal}}</td>
+							<td>{{playerinfo.player.seasons[0].teams[0].statistics.pitching.oba}}</td>
+							<td>{{playerinfo.player.seasons[0].teams[0].statistics.pitching.whip}}</td>	 	        
+						</tr>
+						<tr ng-if="playerinfo.player.seasons[1].teams[0].statistics.pitching">
+							<td>{{playerinfo.player.seasons[1].year}}</td>
+							<td>{{playerinfo.player.seasons[1].teams[0].statistics.pitching.games.win}}</td>
+							<td>{{playerinfo.player.seasons[1].teams[0].statistics.pitching.games.loss}}</td>
+							<td>{{playerinfo.player.seasons[1].teams[0].statistics.pitching.era}}</td>
+							<td>{{playerinfo.player.seasons[1].teams[0].statistics.pitching.games.play}}</td>
+							<td>{{playerinfo.player.seasons[1].teams[0].statistics.pitching.games.start}}</td>
+							<td>{{playerinfo.player.seasons[1].teams[0].statistics.pitching.games.save}}</td>
+							<td>{{playerinfo.player.seasons[1].teams[0].statistics.pitching.games.svo}}</td>
+							<td>{{playerinfo.player.seasons[1].teams[0].statistics.pitching.ip_2}}</td>
+							<td>{{playerinfo.player.seasons[1].teams[0].statistics.pitching.onbase.h}}</td>
+							<td>{{playerinfo.player.seasons[1].teams[0].statistics.pitching.runs.earned}}</td>
+							<td>{{playerinfo.player.seasons[1].teams[0].statistics.pitching.onbase.hr}}</td>
+							<td>{{playerinfo.player.seasons[1].teams[0].statistics.pitching.onbase.bb}}</td>
+							<td>{{playerinfo.player.seasons[1].teams[0].statistics.pitching.outs.ktotal}}</td>
+							<td>{{playerinfo.player.seasons[1].teams[0].statistics.pitching.oba}}</td>
+							<td>{{playerinfo.player.seasons[1].teams[0].statistics.pitching.whip}}</td>	 	
+						</tr>
+						<tr ng-if="playerinfo.player.seasons[2].teams[0].statistics.pitching">
+							<td>{{playerinfo.player.seasons[2].year}}</td>
+							<td>{{playerinfo.player.seasons[2].teams[0].statistics.pitching.games.win}}</td>
+							<td>{{playerinfo.player.seasons[2].teams[0].statistics.pitching.games.loss}}</td>
+							<td>{{playerinfo.player.seasons[2].teams[0].statistics.pitching.era}}</td>
+							<td>{{playerinfo.player.seasons[2].teams[0].statistics.pitching.games.play}}</td>
+							<td>{{playerinfo.player.seasons[2].teams[0].statistics.pitching.games.start}}</td>
+							<td>{{playerinfo.player.seasons[2].teams[0].statistics.pitching.games.save}}</td>
+							<td>{{playerinfo.player.seasons[2].teams[0].statistics.pitching.games.svo}}</td>
+							<td>{{playerinfo.player.seasons[2].teams[0].statistics.pitching.ip_2}}</td>
+							<td>{{playerinfo.player.seasons[2].teams[0].statistics.pitching.onbase.h}}</td>
+							<td>{{playerinfo.player.seasons[2].teams[0].statistics.pitching.runs.earned}}</td>
+							<td>{{playerinfo.player.seasons[2].teams[0].statistics.pitching.onbase.hr}}</td>
+							<td>{{playerinfo.player.seasons[2].teams[0].statistics.pitching.onbase.bb}}</td>
+							<td>{{playerinfo.player.seasons[2].teams[0].statistics.pitching.outs.ktotal}}</td>
+							<td>{{playerinfo.player.seasons[2].teams[0].statistics.pitching.oba}}</td>
+							<td>{{playerinfo.player.seasons[2].teams[0].statistics.pitching.whip}}</td>	 	
+						</tr>
+						<tr ng-if="playerinfo.player.seasons[3].teams[0].statistics.pitching">
+							<td>{{playerinfo.player.seasons[3].year}}</td>
+							<td>{{playerinfo.player.seasons[3].teams[0].statistics.pitching.games.win}}</td>
+							<td>{{playerinfo.player.seasons[3].teams[0].statistics.pitching.games.loss}}</td>
+							<td>{{playerinfo.player.seasons[3].teams[0].statistics.pitching.era}}</td>
+							<td>{{playerinfo.player.seasons[3].teams[0].statistics.pitching.games.play}}</td>
+							<td>{{playerinfo.player.seasons[3].teams[0].statistics.pitching.games.start}}</td>
+							<td>{{playerinfo.player.seasons[3].teams[0].statistics.pitching.games.save}}</td>
+							<td>{{playerinfo.player.seasons[3].teams[0].statistics.pitching.games.svo}}</td>
+							<td>{{playerinfo.player.seasons[3].teams[0].statistics.pitching.ip_2}}</td>
+							<td>{{playerinfo.player.seasons[3].teams[0].statistics.pitching.onbase.h}}</td>
+							<td>{{playerinfo.player.seasons[3].teams[0].statistics.pitching.runs.earned}}</td>
+							<td>{{playerinfo.player.seasons[3].teams[0].statistics.pitching.onbase.hr}}</td>
+							<td>{{playerinfo.player.seasons[3].teams[0].statistics.pitching.onbase.bb}}</td>
+							<td>{{playerinfo.player.seasons[3].teams[0].statistics.pitching.outs.ktotal}}</td>
+							<td>{{playerinfo.player.seasons[3].teams[0].statistics.pitching.oba}}</td>
+							<td>{{playerinfo.player.seasons[3].teams[0].statistics.pitching.whip}}</td>	 	
+						</tr>
+					</tbody>
+				</table>
+			</div>
 		</div>
+	</div>
+	<div id="splits">
+		<h3 class="splitsTitle">Splits</h3>
+		<table id="homeAwaySplits" class="table" style="width:45%">
+			<thead>
+			<tr>
+				<th>2016</th>
+				<th>Home</th>
+				<th>Away</th> 
+			</tr>
+		</thead>
+			<tr>
+				<td class="splitsStat">AB</td>
+				<td>{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].home_away[0].ab}}</td>
+				<td>{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].home_away[1].ab}}</td> 
+			</tr>
+			<tr>
+				<td class="splitsStat">H</td>
+				<td>{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].home_away[0].h}}</td>
+				<td>{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].home_away[1].h}}</td> 
+			</tr>
+			<tr>
+				<td class="splitsStat">AVG</td>
+				<td>{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].home_away[0].avg}}</td>
+				<td>{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].home_away[1].avg}}</td> 
+			</tr>
+			<tr>
+				<td class="splitsStat">OBP</td>
+				<td>{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].home_away[0].obp}}</td>
+				<td>{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].home_away[1].obp}}</td> 
+			</tr>
+			<tr>
+				<td class="splitsStat">SLG</td>
+				<td>{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].home_away[0].slg}}</td>
+				<td>{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].home_away[1].slg}}</td> 
+			</tr>
+			<tr>
+				<td class="splitsStat">OPS</td>
+				<td>{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].home_away[0].ops}}</td>
+				<td>{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].home_away[1].ops}}</td> 
+			</tr>
+			<tr>
+				<td class="splitsStat">HR</td>
+				<td>{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].home_away[0].hr}}</td>
+				<td>{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].home_away[1].hr}}</td> 
+			</tr>
+			<tr>
+				<td class="splitsStat">RBI</td>
+				<td>{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].home_away[0].rbi}}</td>
+				<td>{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].home_away[1].rbi}}</td> 
+			</tr>
+			<tr>
+				<td class="splitsStat">R</td>
+				<td>{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].home_away[0].runs}}</td>
+				<td>{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].home_away[1].runs}}</td> 
+			</tr>
+		</table>
+
+
+		<table id="dayNightSplits" class="table" style="width:45%">
+
+			<thead>
+			<tr>
+				<th>2016</th>
+				<th>Day</th>
+				<th>Night</th> 
+			</tr>
+		</thead>
+			<tr>
+				<td class="splitsStat">AB</td>
+				<td>{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].day_night[1].ab}}</td>
+				<td>{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].day_night[0].ab}}</td> 
+			</tr>
+			<tr>
+				<td class="splitsStat">H</td>
+				<td>{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].day_night[1].h}}</td>
+				<td>{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].day_night[0].h}}</td> 
+			</tr>
+			<tr>
+				<td class="splitsStat">AVG</td>
+				<td>{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].day_night[1].avg}}</td>
+				<td>{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].day_night[0].avg}}</td> 
+			</tr>
+			<tr>
+				<td class="splitsStat">OBP</td>
+				<td>{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].day_night[1].obp}}</td>
+				<td>{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].day_night[0].obp}}</td> 
+			</tr>
+			<tr>
+				<td class="splitsStat">SLG</td>
+				<td>{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].day_night[1].slg}}</td>
+				<td>{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].day_night[0].slg}}</td> 
+			</tr>
+			<tr>
+				<td class="splitsStat">OPS</td>
+				<td>{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].day_night[1].ops}}</td>
+				<td>{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].day_night[0].ops}}</td> 
+			</tr>
+			<tr>
+				<td class="splitsStat">HR</td>
+				<td>{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].day_night[1].hr}}</td>
+				<td>{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].day_night[0].hr}}</td> 
+			</tr>
+			<tr>
+				<td class="splitsStat">RBI</td>
+				<td>{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].day_night[1].rbi}}</td>
+				<td>{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].day_night[0].rbi}}</td> 
+			</tr>
+			<tr>
+				<td class="splitsStat">R</td>
+				<td>{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].day_night[1].runs}}</td>
+				<td>{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].day_night[0].runs}}</td> 
+			</tr>
+		</table>			
+	</div>
+	<div class="pitcherHand">
+		<div class="againstRighties">
+			<h3>BA RHP</h3>
+			<div>
+			<p class="rhstats">
+				<span class="rhavg">AVG</span>
+				<span class="rhobp">OBP</span>
+				<span class="rhslg">SLG</span>
+				<span class="rhops">OPS</span>
+				<span class="rhhr">HR</span>
+			</p>
 		</div>
 
+			<p id="barhpP">
+			<span class="barhpdata">{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].pitcher_hand[0].avg}}</span>
+			<span class="barhpdata">{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].pitcher_hand[0].obp}}</span>
+			<span class="barhpdata">{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].pitcher_hand[0].slg}}</span>
+			<span class="barhpdata">{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].pitcher_hand[0].ops}}</span>
+			<span class="barhpdata">{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].pitcher_hand[0].hr}}</span>
+		</p>
+		</div>
 
 	</div>
+
+	<div class="pitcherHand">
+		<div class="againstLefties">
+			<h3>BA LHP</h3>
+			<div>
+			<p class="rhstats">
+				<span class="rhavg">AVG</span>
+				<span class="rhobp">OBP</span>
+				<span class="rhslg">SLG</span>
+				<span class="rhops">OPS</span>
+				<span class="rhhr">HR</span>
+			</p>
+		</div>
+
+			<p id="barhpP">
+			<span class="barhpdata">{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].pitcher_hand[1].avg}}</span>
+			<span class="barhpdata">{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].pitcher_hand[1].obp}}</span>
+			<span class="barhpdata">{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].pitcher_hand[1].slg}}</span>
+			<span class="barhpdata">{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].pitcher_hand[1].ops}}</span>
+			<span class="barhpdata">{{playerinfo.player.seasons[0].teams[0].splits.hitting[0].pitcher_hand[1].hr}}</span>
+		</p>
+		</div>
+
+	</div>
+	<div id="findPlayer">
 	<select class="dropdown" ng-model="playerid">
 		<option value="{{player.id}}" ng-repeat="player in players.players">{{player.full_name}}</option>
 	</select>
@@ -187,6 +347,8 @@
 			<i class="fa fa-caret-right mainButtonArrow" style="font-size:14px;"></i>
 		</span>
 	</button>
+</div>
+</div>
 </div>
 
 

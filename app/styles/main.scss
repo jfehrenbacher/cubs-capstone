@@ -13,6 +13,10 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 body {
   padding: 0;
 }
+.statistics {
+  padding-top:10px;
+}
+
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
@@ -195,6 +199,7 @@ body {
 .playerName {
   color:white;
   font-family: "JerseyM54";
+  font-size:44px;
 }
 
 .slashline {
@@ -214,7 +219,8 @@ body {
 
 h3 {
   color:#b00101;
-  font-family: 'JerseyM54';
+  font-family: 'Moon';
+  font-weight:bold;
   // background-color:#b00101;
 // padding-left:10px;
 // padding-top:3px;
@@ -223,7 +229,72 @@ h3 {
 // font-size:16px;
 }
 
+//// SPLITS
+#splits {
+  color:white;
+  font-family:"Moon";
+  position:relative;
+  bottom:25px;
+}
+.splitsStat {
+  font-weight:bold;
+}
+#dayNightSplits {
+  width:45%;
+  position:relative;
+  left:55%;
+  bottom:391px;
 
+}
+#homeAwaySplits {
+  width:45%
+}
+.splitsTitle {
+  padding-bottom: 10px;
+}
+#findPlayer {
+  position:relative;
+  bottom:300px;
+}
+.pitcherHand {
+  position:relative;
+  bottom:400px;
+  padding-top:5px;
+}
+#barhpTitle {
+  font-family:"jerseym54";
+  color:white;
+}
+.rhstats {
+  font-family:"Moon";
+  position:relative;
+  top:60px;
+  left:76px;
+  color:white;
+}
+.rhobp {
+  padding-left:129px;
+}
+.rhslg {
+  padding-left:133px;
+}
+.rhops {
+  padding-left:129px;
+}
+.rhhr {
+  padding-left:71px;
+}
+.barhpdata {
+  padding:25px;
+  color:White;
+  font-size:40px;
+  font-family:"Moon";
+  font-weight:bold;
+}
+#barhpP {
+  position:relative;
+  bottom:20px;
+}
 //// ANIMATIONS
 
 @keyframes appear {
